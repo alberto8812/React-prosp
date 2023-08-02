@@ -1,11 +1,12 @@
 
+import { Navegation } from './Routes/Navegation,';
 import logo from './logo.svg';
 
 
 function App() {
   return (
   <>
-  <h1>react</h1>
+  <Navegation/>
   </>
   );
 }
