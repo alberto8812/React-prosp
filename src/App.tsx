@@ -1,13 +1,13 @@
+import React from 'react';
 
-import { Navegation } from './Routes/Navegation,';
-import logo from './logo.svg';
-
+import { Navegation } from './Routes/Navegation';
 
 function App() {
   return (
-  <>
-  <Navegation/>
-  </>
+   <>
+    <Navegation/>
+   
+   </>
   );
 }
 
