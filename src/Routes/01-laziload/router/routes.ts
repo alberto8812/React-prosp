@@ -12,20 +12,20 @@ interface Route{
 export const routes:Route[]=[
     {
         to:'/lazy1',
-        path: '/lazy-1',
+        path: '/lazy1',
         Component:LazyPage1,
         name: 'lazy-1',
     },
     {
         to:'/lazy2',
-        path: '/lazy-2',
+        path: '/lazy2',
         Component:LazyPage2,
         name: 'lazy-2',
     },
 
     {
         to:'/lazy3',
-        path: '/lazy-3',
+        path: '/lazy3',
         Component:LazyPage3,
         name: 'lazy-3 ',
     },
