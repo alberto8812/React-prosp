@@ -17,9 +17,9 @@ interface Route{
  * 
  */
 
-const Lazy1=lazy(()=>import('../pages/LazyPage1'));
-const Lazy2=lazy(()=>import('../pages/LazyPage2'));
-const Lazy3=lazy(()=>import('../pages/LazyPage3'));
+const Lazy1=lazy(()=>import(/*webpackChunkName:"LazyPage1"*/'../pages/LazyPage1'));
+const Lazy2=lazy(()=>import(/*webpackChunkName:"LazyPage2"*/'../pages/LazyPage2'));
+const Lazy3=lazy(()=>import(/*webpackChunkName:"LazyPage3"*/'../pages/LazyPage3'));
 
 export const routes:Route[]=[
     {
