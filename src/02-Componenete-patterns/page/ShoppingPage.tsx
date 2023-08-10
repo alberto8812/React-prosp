@@ -4,6 +4,7 @@ import { ProductCard } from '../components/ProductCard'
 const product={
   id:'1',
   title:'Coffee-mug',
+  img:'./coffee-mug.png',
 
 }
 
