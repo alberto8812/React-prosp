@@ -47,10 +47,10 @@ export const ProductImage=({img=''})=>{
 }
 
 
-export const ProductoTitle=()=>{
+export const ProductoTitle=({title}:{title:string})=>{
 const {Product} = useContext(ProductContext)
   return(
-      <span className={styles.productDescription}>{Product.title}</span>
+  <span className={styles.productDescription}>{title?title:Product.title}</span>
   )
 }
 

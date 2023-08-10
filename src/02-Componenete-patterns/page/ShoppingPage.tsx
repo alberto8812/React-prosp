@@ -17,8 +17,8 @@ export const ShoppingPage = () => {
         <hr/>
         <ProductCard Product={product} >
           <ProductImage/>
-          <ProductoTitle/>
-          <ProductButtons/>
+          <ProductoTitle title={''}/>
+          <ProductButtons />
         </ProductCard>
     </div>
   )
