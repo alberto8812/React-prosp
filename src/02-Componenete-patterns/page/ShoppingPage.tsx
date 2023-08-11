@@ -1,6 +1,6 @@
 import React from 'react'
 import { ProductButtons, ProductCard, ProductImage, ProductTitle } from '../components'
-
+import '../styles/custom-styles.css'
 
 const product={
   id:'1',
@@ -16,7 +16,10 @@ export const ShoppingPage = () => {
     <div>
         <h1>Shopping Store</h1>
         <hr/>
-        <ProductCard Product={product} >
+        <ProductCard 
+        Product={product} 
+        className="bg-dark"
+        >
           <ProductImage/>
           <ProductTitle title={''}/>
           <ProductButtons />
