@@ -13,29 +13,22 @@ const product={
 
 export const ShoppingPage = () => {
   return (
-    <div>
+    <div >
         <h1>Shopping Store</h1>
         <hr/>
-        <ProductCard 
-        Product={product} 
-        className="bg-dark text-white"
-        >
-          <ProductImage className='custom-image'/>
-          <ProductTitle title={''} className="text-white"/>
-          <ProductButtons className='custom-button' />
-        </ProductCard>
+        <div style={{display:'flex', flexDirection:'row'}}>
+          <ProductCard 
+            Product={product} 
+            className="bg-dark text-white"
+          
+          >
+            <ProductImage className='custom-image'/>
+            <ProductTitle title={''} className="text-white"/>
+            <ProductButtons className='custom-button' />
+          </ProductCard>
 
-        <ProductCard 
-        Product={product} 
-        style={{
-          backgroundColor: '#70D1F8'  
-        }}
-        >
-          <ProductImage />
-          <ProductTitle title={''} />
-          <ProductButtons />
-        </ProductCard>
 
+        </div>
     </div>
   )
 }
