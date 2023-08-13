@@ -12,3 +12,9 @@
    width: calc(100%-20px);
 ;
 }
+
+.custom-button button, .custom-button div {
+    color: white;
+    border-color: white;
+
+}

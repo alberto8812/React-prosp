@@ -18,11 +18,11 @@ export const ShoppingPage = () => {
         <hr/>
         <ProductCard 
         Product={product} 
-        className="bg-dark"
+        className="bg-dark text-white"
         >
           <ProductImage className='custom-image'/>
           <ProductTitle title={''} className="text-white"/>
-          <ProductButtons />
+          <ProductButtons className='custom-button' />
         </ProductCard>
     </div>
   )
