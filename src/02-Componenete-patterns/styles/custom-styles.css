@@ -18,3 +18,11 @@
     border-color: white;
 
 }
+.text-bold{
+    font-size: bold;
+}
+.shopping-cart{
+    position: fixed;
+    top: 0px;
+    right: 10px;
+}
