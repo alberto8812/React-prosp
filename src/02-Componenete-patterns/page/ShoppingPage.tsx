@@ -33,7 +33,7 @@ export const ShoppingPage = () => {
     setShoppingCart(oldShoppingCart=>{
       if(Count===0){
        
-       const{[product.id]:toDelete,...rest}=oldShoppingCart;//desetructuramos el elemento que quiero el minar el numero de id.
+       const{[Product.id]:toDelete,...rest}=oldShoppingCart;//desetructuramos el elemento que quiero el minar el numero de id.
 
         return rest;//
       }
