@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { ProductButtons, ProductCard, ProductImage, ProductTitle } from '../components'
 import '../styles/custom-styles.css'
-import { Product } from '../interface/interfaces'
+import { Product, onChangeArgs } from '../interface/interfaces'
 
 const product={
   id:'1',
@@ -28,8 +28,21 @@ export const ShoppingPage = () => {
 
   const [shoppingCart, setShoppingCart] = useState<{[key:string]:ProductInCart}>({});
 
-  const onproductCountChange = ()=>{
-    console.log('onproductCountChange');
+  const onproductCountChange = ({Count,Product}:onChangeArgs)=>{
+
+    setShoppingCart(oldShoppingCart=>{
+
+      if(Count===0){
+
+       const{[product.title]:toDelete,...rest}=oldShoppingCart;//desetructuramos el elemento que quiero el minar el numero de id.
+        return rest;//
+      }
+
+      return {
+        ...oldShoppingCart,
+        [Product.id]:{...Product,count:Count}
+      }
+    })
   };
 
   return (
@@ -42,7 +55,8 @@ export const ShoppingPage = () => {
                 Product={product} 
                 className="bg-dark text-white"
                 key={product.id}
-                onChange={()=>onproductCountChange()}
+                onChange={onproductCountChange}
+    
               >
                 <ProductImage className='custom-image'/>
                 <ProductTitle title={''} className="text-bold"/>
