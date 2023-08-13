@@ -24,5 +24,9 @@ Image: ({ img }: {
 Buttons: ({className}:{className?:string}) => JSX.Element,
 }
 
+export interface onChangeArgs{
+  Product: Product;
+  Count: number;
+}
 
 
