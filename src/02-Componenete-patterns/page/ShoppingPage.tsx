@@ -31,10 +31,10 @@ export const ShoppingPage = () => {
   const onproductCountChange = ({Count,Product}:onChangeArgs)=>{
 
     setShoppingCart(oldShoppingCart=>{
-
       if(Count===0){
+       
+       const{[Product.id]:toDelete,...rest}=oldShoppingCart;//desetructuramos el elemento que quiero el minar el numero de id.
 
-       const{[product.title]:toDelete,...rest}=oldShoppingCart;//desetructuramos el elemento que quiero el minar el numero de id.
         return rest;//
       }
 
@@ -43,6 +43,7 @@ export const ShoppingPage = () => {
         [Product.id]:{...Product,count:Count}
       }
     })
+
   };
 
   return (
@@ -65,24 +66,22 @@ export const ShoppingPage = () => {
           ))}
 
               <div className='shopping-cart'>
-                <ProductCard 
-                  Product={product2} 
+
+
+              {Object.entries(shoppingCart).map(([key,product]) => (//Object.entries map solo hace iteracion con array no on un objeto
+              // Object.entries propio de javascrip entrada de un objeto
+              <ProductCard 
+                  Product={product} 
                   className="bg-dark text-white"
                   style={{width: '100px'}}
+                  key={product.id}
                   
                 >
                   <ProductImage className='custom-image'/>
                   <ProductButtons className='custom-button' />
                 </ProductCard>
-
-                <ProductCard 
-                  Product={product} 
-                  className="bg-dark text-white"
-                  style={{width: '100px'}}
-                >
-                  <ProductImage className='custom-image'/>
-                  <ProductButtons className='custom-button' />
-                </ProductCard>
+              ))}
+            
               </div>
 
         </div>

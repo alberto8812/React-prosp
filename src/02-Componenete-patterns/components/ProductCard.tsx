@@ -19,12 +19,12 @@ export interface Props{
   className?: string;
   style?:CSSProperties
   onChange?: (arg:onChangeArgs)=>void ;
-  value?: number;  
+  Count?: number;  
 }
 
 
-export const ProductCard = ({children,Product,className,style,onChange,value}:Props) => {
-  const {Counter,increaseBy}=UseProduct({onChange,Product,value})
+export const ProductCard = ({children,Product,className,style,onChange,Count}:Props) => {
+  const {Counter,increaseBy}=UseProduct({onChange,Product,Count})
 
   return (
     <Provider

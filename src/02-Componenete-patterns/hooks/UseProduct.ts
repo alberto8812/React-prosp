@@ -4,12 +4,12 @@ import { Product, onChangeArgs } from "../interface/interfaces";
 interface Props{
   Product:Product;
   onChange?:(arg:onChangeArgs) => void;
-  value?:number;
+  Count?:number;
 }
 
-export const UseProduct = ({onChange,Product,value=0}:Props) => {
+export const UseProduct = ({onChange,Product,Count=0}:Props) => {
 
-    const [Counter, setCounter] = useState(value);
+    const [Counter, setCounter] = useState(Count);
 
 
     const increaseBy=(value:number)=>{
