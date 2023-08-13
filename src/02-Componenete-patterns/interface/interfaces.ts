@@ -13,15 +13,15 @@ export interface ProductContextProps {
   Product:Product;
 }
 
-export interface ProductCardHOC{
+export interface ProductCardHOCProps{
   ({ children, Product, className }: ProductCardProps) : JSX.Element,
-  itle: ({ title }: {
+  Title: ({ title }: {
     title: string;
 }) => JSX.Element,
 Image: ({ img }: {
   img?: string | undefined;
 }) => JSX.Element,
-Buttons: () => JSX.Element,
+Buttons: ({className}:{className?:string}) => JSX.Element,
 }
 
 
