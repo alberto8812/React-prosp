@@ -18,11 +18,12 @@ export interface Props{
   children?: ReactElement|ReactElement[];
   className?: string;
   style?:CSSProperties
+  onChange?: ()=>void ;
 }
 
 
-export const ProductCard = ({children,Product,className,style}:Props) => {
-  const {Counter,increaseBy}=UseProduct()
+export const ProductCard = ({children,Product,className,style,onChange}:Props) => {
+  const {Counter,increaseBy}=UseProduct({onChange})
 
   return (
     <Provider
