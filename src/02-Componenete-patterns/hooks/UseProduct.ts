@@ -18,7 +18,7 @@ export const UseProduct = ({onChange,Product,Count=0}:Props) => {
     const increaseBy=(value:number)=>{
       console.log(isControllled.current)
       if(isControllled.current){
-        console.log(value)
+     //   console.log(value)
         return onChange!({Count:value,Product});
       }
         const newValue=Math.max(Counter+value,0)
@@ -29,8 +29,9 @@ export const UseProduct = ({onChange,Product,Count=0}:Props) => {
 
 //actualiza  el setCounter con eñ nuveo valor
     useEffect(() => {
+       console.log(Counter)
       setCounter(Count);
-    
+
     }, [Count])
 
 
