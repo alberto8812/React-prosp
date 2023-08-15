@@ -57,7 +57,7 @@ export const ShoppingPage = () => {
                 className="bg-dark text-white"
                 key={product.id}
                 onChange={onproductCountChange}
-    
+                Count={shoppingCart[product.id]?.count ||0 }// busqueda entre los dos objetos de procuto mas un si existe muestre 0   
               >
                 <ProductImage className='custom-image'/>
                 <ProductTitle title={''} className="text-bold"/>
@@ -75,7 +75,8 @@ export const ShoppingPage = () => {
                   className="bg-dark text-white"
                   style={{width: '100px'}}
                   key={product.id}
-                  
+                  Count={product.count}
+                  onChange={onproductCountChange}//  colocamos un onchange en el product del carrito de compras
                 >
                   <ProductImage className='custom-image'/>
                   <ProductButtons className='custom-button' />
