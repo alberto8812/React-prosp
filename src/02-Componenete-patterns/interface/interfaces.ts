@@ -30,3 +30,9 @@ export interface onChangeArgs{
 }
 
 
+export interface InitialValues {
+   count?: number;
+   maxCount?: number;
+}
+
+

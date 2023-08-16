@@ -8,7 +8,7 @@ export const UseShoppingCart = () => {
     const [shoppingCart, setShoppingCart] = useState<{[key:string]:ProductInCart}>({});
 
     const onproductCountChange = ({Count,Product}:onChangeArgs)=>{
-
+     
       setShoppingCart(oldShoppingCart=>{
         const prodcutIncart:ProductInCart=oldShoppingCart[Product.id] || {...Product,count:0}//SI EL OBJETO NO EXISTE LO CARGA CON 0
         
