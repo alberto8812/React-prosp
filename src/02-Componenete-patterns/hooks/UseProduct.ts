@@ -11,13 +11,14 @@ interface Props{
 
 export const UseProduct = ({onChange,Product,Count=0,initialValues}:Props) => {
 
-    const [Counter, setCounter] = useState(initialValues?.count || Count);//count viene con un valor inicial, si cpunt llega con un valor el usesteate no vuelve a cambiar 
- console.log(initialValues?.count)
-    const isMounted = useRef(false)//CONTROLA SINO  EXISTE LA FUNCION COLOCA UN TRUE  POR EL DOBLE SIGNO DE ADMIRACION 
+    const [Counter, setCounter] = useState<number>(initialValues?.count || Count);//count viene con un valor inicial, si cpunt llega con un valor el usesteate no vuelve a cambiar 
+
+    const isMounted = useRef(false);//CONTROLA SINO  EXISTE LA FUNCION COLOCA UN TRUE  POR EL DOBLE SIGNO DE ADMIRACION 
 
     const increaseBy=(value:number)=>{
       
-        const newValue=Math.max(Counter+value,0)
+       let newValue=Math.max(Counter+value,0);
+       newValue= initialValues?.maxCount? Math.min(newValue,initialValues.maxCount):newValue;
         setCounter(newValue)
         onChange && onChange({Count:newValue,Product});
      
@@ -25,18 +26,15 @@ export const UseProduct = ({onChange,Product,Count=0,initialValues}:Props) => {
 
 
     useEffect(() => {
-   
-      if(!isMounted.current) return;
-      console.log("paso1")
-      setCounter(Count);
-     
+      if ( !isMounted.current ) return;
+      setCounter( Count );
     }, [Count])
 
 
 //actualiza  el setCounter con eñ nuveo valor
-useEffect(() => {
-  isMounted.current=true;
-}, [])
+  useEffect(() => {
+    isMounted.current = true;
+  }, [])
 
 
   return {Counter,increaseBy}
