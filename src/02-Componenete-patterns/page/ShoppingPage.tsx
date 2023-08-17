@@ -33,9 +33,16 @@ export const ShoppingPage = () => {
                   maxCount:10,
                 }}
                 >
-                <ProductImage className='custom-image'/>
-                <ProductTitle title={''} className="text-bold"/>
-                <ProductButtons className='custom-button' />
+                  {
+                    ({reset})=>(
+                      <>
+                        <ProductImage className='custom-image'/>
+                        <ProductTitle title={''} className="text-bold"/>
+                        <ProductButtons className='custom-button' />
+                      </>
+                    )
+                  }
+
               </ProductCard>
 
               <div className='shopping-cart'>

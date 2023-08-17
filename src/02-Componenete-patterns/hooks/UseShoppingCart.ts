@@ -33,5 +33,6 @@ export const UseShoppingCart = () => {
   return{
     onproductCountChange,
     shoppingCart
+ 
   }
 }
