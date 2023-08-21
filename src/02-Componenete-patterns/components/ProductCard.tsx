@@ -2,7 +2,7 @@ import styles from "../styles/styles.module.css";
 import { UseProduct } from "../hooks/UseProduct";
 import { createContext } from "react";
 import { Product,ProductContextProps, onChangeArgs,InitialValues, ProductCardHandlers } from "../interface/interfaces";
-import { ReactElement,CSSProperties } from "react";
+import { CSSProperties } from "react";
 
 
 
