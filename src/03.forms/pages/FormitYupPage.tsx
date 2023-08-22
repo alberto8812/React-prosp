@@ -3,16 +3,12 @@ import '../styles/styles.css'
 import * as Yup from "yup";
 
 
-interface FormValues{
-    firstName: string;
-    lastName: string;
-    email: string;
 
-}
+
 export const FormitYupPage = () => {
 
 
-const {handleChange,values,handleSubmit,errors,touched,handleBlur}=useFormik({
+const {handleSubmit,errors,touched,getFieldProps}=useFormik({
     initialValues: {
         firstName: '',
         lastName: '',
@@ -37,30 +33,21 @@ const {handleChange,values,handleSubmit,errors,touched,handleBlur}=useFormik({
                 <label htmlFor='firstName' >First Name</label>
                 <input 
                     type='text'
-                    name='firstName'
-                    value={values.firstName}
-                    onChange={handleChange}//dentro del formit
-                    onBlur={handleBlur}//cambios de foco
+                   {...getFieldProps('firstName')}
 
                 />
             {touched.firstName && errors.firstName && <span>{errors.firstName}</span>}
-            <label htmlFor='firstName' >last Name</label>
+            <label htmlFor='lastName' >last Name</label>
                 <input 
                     type='text'
-                    name='lastName'
-                    value={values.lastName}
-                    onChange={handleChange}//dentro del formit
-                    onBlur={handleBlur}
+                    {...getFieldProps('lastName')}
                 />
            {touched.lastName && errors.lastName && <span>{errors.lastName}</span>}
 
-            <label htmlFor='firstName' >Email address</label>
+            <label htmlFor='email' >Email address</label>
                 <input 
                     type='email'
-                    name='email' 
-                    value={values.email}
-                    onChange={handleChange}//dentro del formit
-                    onBlur={handleBlur}//cambios de foco
+                    {...getFieldProps('email')}
 
                 />
              {touched.email && errors.email && <span>{errors.email}</span>}
