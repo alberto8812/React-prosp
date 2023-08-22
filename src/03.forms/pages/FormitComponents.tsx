@@ -30,7 +30,7 @@ export const FormitComponents = () => {
                         lastName: Yup.string().max(15,'debe de tener 14 caracteres o menos').required('REQUIRED'),
                         email:Yup.string().email('MUST BE A VALID EMAIL').required('REQUIRED'),
                         terms:Yup.boolean().oneOf([true],'you nedd to accept the terms'),
-                        jobtipe:Yup.string().required('REQUIRED').notOneOf(['it-junior'],'this option is required'),
+                        jobtipe:Yup.string().required('REQUIRED').notOneOf(['it-Junior'],'this option is required'),
                     })
                 }
             >
