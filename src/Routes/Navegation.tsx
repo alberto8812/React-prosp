@@ -6,6 +6,7 @@ import logo from "../logo.svg"
 import { ShoppingPage } from "../02-Componenete-patterns/page/ShoppingPage";
 import { RegisterPage } from "../03.forms/pages/RegisterPage";
 import { FormikPag } from "../03.forms/pages/FormikPag";
+import { FormitYupPage } from "../03.forms/pages/FormitYupPage";
 
 
 
@@ -22,7 +23,7 @@ export const Navegation = () => {
                      <li key="shopping"><NavLink to="/" className={({isActive})=>isActive?'nac-active':''}>Shopping page</NavLink></li>
                      <li key="form"><NavLink to="/Register" className={({isActive})=>isActive?'nac-active':''}>Registes Page</NavLink></li>
                      <li key="formik"><NavLink to="/formik-Register" className={({isActive})=>isActive?'nac-active':''}> Formik Registes Page</NavLink></li>
-
+                     <li key="formik"><NavLink to="/formik-YUP Register" className={({isActive})=>isActive?'nac-active':''}> Formik YUP Registes Page</NavLink></li>
                     </ul>
                 </nav>
 
@@ -30,6 +31,7 @@ export const Navegation = () => {
                 <Route path="/" element={<ShoppingPage/>} key="shopping"/>
                 <Route path="/Register" element={<RegisterPage/>} key="shopping"/>
                 <Route path="/formik-Register" element={<FormikPag/>} key="shopping"/>
+                <Route path="/formik-YUP Register" element={<FormitYupPage/>} key="shopping"/>
                     {/*routes.map(({path,Component})=>(<Route path={path} element={<Component/>} key={path}/>))*/}
                     
 
