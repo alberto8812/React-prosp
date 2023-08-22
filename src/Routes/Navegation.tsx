@@ -7,6 +7,7 @@ import { ShoppingPage } from "../02-Componenete-patterns/page/ShoppingPage";
 import { RegisterPage } from "../03.forms/pages/RegisterPage";
 import { FormikPag } from "../03.forms/pages/FormikPag";
 import { FormitYupPage } from "../03.forms/pages/FormitYupPage";
+import { FormitComponents } from "../03.forms/pages/FormitComponents";
 
 
 
@@ -24,14 +25,16 @@ export const Navegation = () => {
                      <li key="form"><NavLink to="/Register" className={({isActive})=>isActive?'nac-active':''}>Registes Page</NavLink></li>
                      <li key="formik"><NavLink to="/formik-Register" className={({isActive})=>isActive?'nac-active':''}> Formik Registes Page</NavLink></li>
                      <li key="formik"><NavLink to="/formik-YUP Register" className={({isActive})=>isActive?'nac-active':''}> Formik YUP Registes Page</NavLink></li>
+                     <li key="formik"><NavLink to="/formik Component" className={({isActive})=>isActive?'nac-active':''}> Formik Component</NavLink></li>
                     </ul>
                 </nav>
 
                 <Routes>
                 <Route path="/" element={<ShoppingPage/>} key="shopping"/>
-                <Route path="/Register" element={<RegisterPage/>} key="shopping"/>
+                <Route path="/Register" element={<RegisterPage/>} key="Register"/>
                 <Route path="/formik-Register" element={<FormikPag/>} key="shopping"/>
-                <Route path="/formik-YUP Register" element={<FormitYupPage/>} key="shopping"/>
+                <Route path="/formik-YUP Register" element={<FormitYupPage/>} key="YUP"/>
+                <Route path="/formik Component" element={<FormitComponents/>} key="Component"/>
                     {/*routes.map(({path,Component})=>(<Route path={path} element={<Component/>} key={path}/>))*/}
                     
 
