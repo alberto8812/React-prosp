@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+# course description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The course starts with a brief introduction to React with Typescript, but I leave additional videos on YouTube for further reference (these videos are created by me as well and are an additional 5 hours not included here), then we move on to creating a small project that will serve us well. To practice different component creation patterns, I'll explain several very popular ones and little by little we'll build a robust set of components that we'll deploy to NPM via TSDX. Along the way we go through module separation and lazyload, additionally I give my preferred custom point for working with modules.
 
-## Available Scripts
+Then we explain Formik, validations, Yup and dynamic forms, creating simple reusable components that will help us not to have to write the same thing over and over again.
 
-In the project directory, you can run:
+Later we go to Storybook, we explain what it is, what it can be used for, we create a couple of configurations and then we publish our Storybook in several places, eventually we will create the necessary TypeScript configuration files, modifications in the package.json and configurations with semantic release to carry out a systematized process of creating and updating components using GitHub Actions as an intermediary.
 
-### `npm start`
+Then we move to build an application made in my React course from zero to expert that has a personalized backend with JWTs, to transform our React application into a PWA, explaining automatic and manual configurations and customizations that allow us to work without an internet connection. our React application, also install it as if it were a Windows, Linux or Mac application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Specific topics of the course:
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+The course is loaded with a lot of information to improve our React skills, specifically these are some topics of interest that we touch on in the course:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React with TypeScript in 95% of the course
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Lazyload and Suspense
 
-### `npm run eject`
+- Daughter Routes
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Modularization
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Git and GitHub for managing branches, versions, and actions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Component Creation Patterns
+  
+- Deployments to NPM
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- formik
 
-## Learn More
+- story book
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- GitHub Actions: The procedure to create the following
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- PWA
+
+- offline CRUD
+
+- Workbox
+
+- React - Detect online and offline
