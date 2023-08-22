@@ -28,19 +28,16 @@ const validate=({firstName,lastName,email}:FormValues) => {
     }
 
     if(!email){
-        errors.lastName='required';
-    }else if(!emailReg){
-        errors.lastName='Invalid Email address'; 
+        errors.email='required';
+    }else if(!emailReg.test(email)){
+        errors.email='Invalid Email address'; 
     }
     
-    
-
-
  return errors//la funcion debe retornar los errores
 
 };
 
-const {handleChange,values,handleSubmit}=useFormik({
+const {handleChange,values,handleSubmit,errors,touched,handleBlur}=useFormik({
     initialValues: {
         firstName: '',
         lastName: '',
@@ -64,25 +61,30 @@ const {handleChange,values,handleSubmit}=useFormik({
                     name='firstName'
                     value={values.firstName}
                     onChange={handleChange}//dentro del formit
+                    onBlur={handleBlur}//cambios de foco
+
                 />
-            <span>first name is requiered</span>
+            {touched.firstName && errors.firstName && <span>{errors.firstName}</span>}
             <label htmlFor='firstName' >last Name</label>
                 <input 
                     type='text'
                     name='lastName'
                     value={values.lastName}
                     onChange={handleChange}//dentro del formit
+                    onBlur={handleBlur}
                 />
-            <span>last name is requiered</span>
-            <span>Check vailed Email</span>
+           {touched.lastName && errors.lastName && <span>{errors.lastName}</span>}
+
             <label htmlFor='firstName' >Email address</label>
                 <input 
-                    type='Email'
+                    type='email'
                     name='email' 
                     value={values.email}
                     onChange={handleChange}//dentro del formit
+                    onBlur={handleBlur}//cambios de foco
+
                 />
-            <span>email name is requiered</span>
+             {touched.email && errors.email && <span>{errors.email}</span>}
             <button type='submit'>Submit</button>
             </form>
     </div>
