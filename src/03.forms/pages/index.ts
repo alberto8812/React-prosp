@@ -1,3 +1,4 @@
+export { DynamicForm } from "./DynamicForm"
 export { RegisterFormikPage } from "./RegisterFormikPage "
 export { FormitYupPage } from "./FormitYupPage"
 export { FormikPag } from "./FormikPag"
