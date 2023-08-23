@@ -4,7 +4,7 @@ import { Routes,Route,NavLink } from 'react-router-dom'
 import logo from "../logo.svg"
 
 import { ShoppingPage } from "../02-Componenete-patterns/page/ShoppingPage";
-import { RegisterPage,FormikPag,FormitComponents,FormitAbstraction,FormitYupPage, RegisterFormikPage } from "../03.forms/pages";
+import { RegisterPage,FormikPag,FormitComponents,FormitAbstraction,FormitYupPage, RegisterFormikPage, DynamicForm } from "../03.forms/pages";
 
 
 
@@ -26,6 +26,7 @@ export const Navegation = () => {
                      <li key="Component"><NavLink to="/formik Component" className={({isActive})=>isActive?'nac-active':''}> Formik Component</NavLink></li>
                      <li key="FormitAbstraction"><NavLink to="/FormitAbstraction" className={({isActive})=>isActive?'nac-active':''}> Formik Abstraction</NavLink></li>
                      <li key="FormitRegisterFormik"><NavLink to="/FormitRegisterFormik" className={({isActive})=>isActive?'nac-active':''}> Formik Formik page</NavLink></li>
+                     <li key="DinamicForm"><NavLink to="/DinamicForm" className={({isActive})=>isActive?'nac-active':''}> Form Dinamic</NavLink></li>
                     </ul>
                 </nav>
 
@@ -37,7 +38,8 @@ export const Navegation = () => {
                 <Route path="/formik Component" element={<FormitComponents/>} key="Component"/>
                 <Route path="/FormitAbstraction" element={<FormitAbstraction/>} key="FormitAbstraction"/>
                 <Route path="/FormitRegisterFormik" element={<RegisterFormikPage/>} key="FormitAbstraction"/>
-                FormitAbstraction
+                <Route path="/DinamicForm" element={< DynamicForm/>} key="FormitAbstraction"/>
+               
                     {/*routes.map(({path,Component})=>(<Route path={path} element={<Component/>} key={path}/>))*/}
                     
 
