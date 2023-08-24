@@ -2,6 +2,7 @@ import React from 'react'
 import formJson from "../data/custom-fomr.json";
 import { Formik,Form } from "formik";
 import { MySelect, MyTextInput } from '../components';
+import * as Yup from "yup";
 
 console.log(formJson)
 
@@ -10,10 +11,29 @@ console.log(formJson)
 const initialValues: {[key:string]:any}= {//va aset un objeto con clave valor que  carga con cualquier informacion
 
 };
+const requiredFields:{[key:string]:any}= {//
+
+};
 
 for (const input of formJson) {
-    initialValues[input.name] = input.value;    
+    initialValues[input.name] = input.value;  // cacturar el valor inicial
+    
+    if(!input.Validations)continue; //validaciones que salga
+
+    let schema = Yup.string()
+    for(const rule of input.Validations) {
+            if(rule.type ==='required'){//esquema para cado uno de los campos
+                schema=schema.required('this field is required');
+            }
+            if(rule.type ==='minlength'){
+                schema=schema.min((rule as any).value ||1,'this field is required');
+            }
+    }
+    //crear el objeto
+    requiredFields[InputDeviceInfo.name] = schema;
 }
+
+const validationScgema=Yup.object({...requiredFields});
 
 export const DynamicForm = () => {
   return (
@@ -22,10 +42,12 @@ export const DynamicForm = () => {
 
         <Formik
             initialValues={initialValues}
+            validationSchema={validationScgema}
             onSubmit={
                 (values)=>{
                     console.log(values);
                 }
+           
             }
         >
             {
